@@ -13,14 +13,14 @@ $short = str_replace( array( '\'', '"',',' , ';', '<', '>','$', '.', '/', '\\', 
 $short = substr($short, -7);
 $POST['long_link'] = str_replace( array( '\'', '"',',' , ';', '<', '>'), '', $POST['long_link']);
 
-$_POST['short_link'] = $short . '.php';
+$_POST['short_link'] = $short ;
 
 
-                    $message =  "<?php \n" . "\$" . 'long ="' . $_POST["long_link"] . '";';
-                    $message .= file_get_contents("../links/template.php",TRUE);
-                    $myfile = fopen("../../links/" . $short . '.php' , "w") or die("Unable to open file!");
-                    fwrite($myfile, $message);
-                    fclose($myfile);
+                    // $message =  "<?php \n" . "\$" . 'long ="' . $_POST["long_link"] . '";';
+                    // $message .= file_get_contents("../links/template.php",TRUE);
+                    // $myfile = fopen("../../links/" . $short . '.php' , "w") or die("Unable to open file!");
+                    // fwrite($myfile, $message);
+                    // fclose($myfile);
 
 $add = Link::add($_POST);
 

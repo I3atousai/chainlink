@@ -16,11 +16,11 @@ $links = Link::query(
 foreach ($links as $link) {
     echo $link['short_link'];
     if (!isset($link['id_user'])) {
-        unlink("../../links/" . $link['short_link']);
+        // unlink("../../links/" . $link['short_link']);
         Link::delete([ ['id', '=', $link['id'], 'value'], ]);
     }
     if ($link['diff'] < -180) {
-        unlink("../../links/" . $link['short_link']);
+        // unlink("../../links/" . $link['short_link']);
         Link::delete([ ['id', '=', $link['id'], 'value'], ]);
     }
     // deletes links older than half a year and links with no user id older than 14 days

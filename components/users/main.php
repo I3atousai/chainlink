@@ -13,8 +13,8 @@ use App\Helpers\Navigate;
             
             foreach ($data['links'] as $link) {
                 
-               echo "<p id='" . $link['id']. "' class='link fs16 mb8' data-tooltip='" . $link['long_link'] . "' >" .  Navigate::link('links/', mode:"return") .
-                $link['short_link'] .
+               echo "<p id='" . $link['id']. "' class='link fs16 mb8' data-tooltip='" . $link['long_link'] . "' >" .  Navigate::link('L.php', mode:"return") .
+                  '?s=' .$link['short_link'] .
                 "<button onclick='delete_link(". $link['id'] . ',' . '"' . $link['short_link']. '"' .")' class='del_link' >❌</button> </p>";
               
            } 

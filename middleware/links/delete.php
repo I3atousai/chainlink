@@ -13,7 +13,7 @@ $delete = Link::delete([
     ['id', '=', $data['id'], 'value'],
 ]);
 
-unlink("../../links/" . $data['short_link']);
+// unlink("../../links/" . $data['short_link']);
 if (!$delete) {
     die("Ссылка не удалена");
 }
