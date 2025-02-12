@@ -1,0 +1,99 @@
+
+#box_roof {
+    color: var(--add_color_1);
+    font-weight: bold;
+    font-size: 1.6rem;
+    text-align: center;
+    width: 35%;
+    max-width: 380px;
+    height: 3rem;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+    background-color: var(--text_color);
+    transform-origin: top left;
+    transform: rotate(-15deg) translateX(-1rem);
+
+    transition: transform 500ms;
+    animation-name: open_box;
+    animation-duration: 1.5s;
+}
+
+
+#form_box {
+    box-shadow:inset 0px 5px 5px 0px rgba(92, 92, 92, 0.671);
+    margin: 0 auto;
+    width: 30%;
+    max-width: 320px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--main_color);
+    border-radius: 0px 0px 12px 12px;
+}
+
+.box_input{
+    width: 100%;
+    max-width: 320px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--add_color_1);
+    background-color: var(--add_color_3);
+    font-weight: bold;
+    font-size: 1.3rem;
+    text-indent: 20px;
+}
+.box_input:first-of-type{
+    margin-top: 24px;
+}
+
+#form_box label {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: var(--add_color_1);
+
+}
+
+.box_input::placeholder {
+    font-size: 1.3rem;
+    color: var(--add_color_1);
+}
+
+#btn_submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 320px;
+    height: 45px;
+    border-radius: 0 0 12px 12px;
+    cursor: pointer;
+    color: var(--add_color_1);
+    background-color: var(--add_color_3);
+}
+
+@keyframes open_box {
+    0% {
+        transform-origin: top left;
+        transform: rotate(0deg) translateX(0rem);
+    }
+    100% {
+      
+    transform-origin: top left;
+    transform: rotate(-15deg) translateX(-1rem);
+    }
+  }
+
+@keyframes close_box {
+    0% {
+      
+    transform-origin: top left;
+    transform: rotate(-15deg) translateX(-1rem);
+    }
+    100% {
+        transform-origin: top left;
+        transform: rotate(0deg) translateX(0rem);
+    }
+}
